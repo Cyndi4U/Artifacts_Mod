@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "artifacts:block/dirt",
+    "north": "artifacts:block/alpha_grass_block_side",
+    "south": "artifacts:block/alpha_grass_block_side",
+    "east": "artifacts:block/alpha_grass_block_side",
+    "west": "artifacts:block/alpha_grass_block_side",
+    "up": "artifacts:block/alpha_grass_block_top",
+    "down": "artifacts:block/dirt"
+  }
+}

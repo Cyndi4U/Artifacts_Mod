@@ -1,0 +1,10 @@
+{
+  "item.artifacts.ruby": "Ruby",
+
+  "block.artifacts.ruby_block": "Block of Ruby",
+  "block.artifacts.alpha_grass_block": "Alpha Grass Block",
+  "block.artifacts.rose": "Rose",
+  "block.artifacts.cyan_rose": "Cyan Rose",
+
+  "itemGroup.artifactstab": "Artifacts"
+}
