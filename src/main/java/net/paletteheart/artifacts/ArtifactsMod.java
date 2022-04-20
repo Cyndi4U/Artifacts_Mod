@@ -48,6 +48,7 @@ public class ArtifactsMod {
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYAN_ROSE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.PAEONIA.get(), RenderType.cutout());
         //ItemBlockRenderTypes.setRenderLayer(ModBlocks.BOES.get(), RenderType.cutout());
     }
 
