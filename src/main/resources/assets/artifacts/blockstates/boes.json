@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "artifacts:block/boes"
+    },
+    "facing=east": {
+      "model": "artifacts:block/boes",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "artifacts:block/boes",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "artifacts:block/boes",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "artifacts:block/element",
+  "textures": {
+    "all": "artifacts:block/unknown_element"
+  }
+}

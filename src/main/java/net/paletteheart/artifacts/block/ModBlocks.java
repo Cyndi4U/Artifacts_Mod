@@ -14,6 +14,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.paletteheart.artifacts.ArtifactsMod;
 import net.paletteheart.artifacts.block.custom.AlphaGrassBlock;
+import net.paletteheart.artifacts.block.custom.BOESBlock;
+import net.paletteheart.artifacts.block.custom.WaterSpawnerBlock;
 import net.paletteheart.artifacts.item.ModCreativeModeTab;
 import net.paletteheart.artifacts.item.ModItems;
 
@@ -39,6 +41,30 @@ public class ModBlocks {
     public static final RegistryObject<Block> CYAN_ROSE = registerBlock("cyan_rose",
             () -> new FlowerBlock(MobEffects.WITHER, 4,
                     BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.ARTIFACTS_TAB);
+
+    public static final RegistryObject<Block> PAEONIA = registerBlock("paeonia",
+            () -> new FlowerBlock(MobEffects.WITHER, 4,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.ARTIFACTS_TAB);
+
+    public static final RegistryObject<Block> RAINBOW_WOOL = registerBlock("rainbow_wool",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_RED)
+                    .strength(0.8F).sound(SoundType.WOOL)), ModCreativeModeTab.ARTIFACTS_TAB);
+
+    public static final RegistryObject<Block> UNKNOWN_ELEMENT = registerBlock("unknown_element",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
+                    .strength(0F)), ModCreativeModeTab.ARTIFACTS_TAB);
+
+    //public static final RegistryObject<Block> NETHERITE_STAIRS = registerBlock("netherite_stairs",
+    //        () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLACK)
+    //                .strength(50f, 1200f).requiresCorrectToolForDrops()), ModCreativeModeTab.ARTIFACTS_TAB);
+
+    //public static final RegistryObject<Block> BOES = registerBlock("boes",
+    //        () -> new BOESBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED)
+    //                .strength(0.8F)), ModCreativeModeTab.ARTIFACTS_TAB);
+
+    //public static final RegistryObject<Block> WATER_SPAWNER = registerBlock("water_spawner",
+    //        () -> new WaterSpawnerBlock(BlockBehaviour.Properties.of(Material.WATER)
+    //                .instabreak()), ModCreativeModeTab.ARTIFACTS_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

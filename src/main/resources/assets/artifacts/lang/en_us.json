@@ -5,6 +5,11 @@
   "block.artifacts.alpha_grass_block": "Alpha Grass Block",
   "block.artifacts.rose": "Rose",
   "block.artifacts.cyan_rose": "Cyan Rose",
+  "block.artifacts.paeonia": "Paeonia",
+  "block.artifacts.water_spawner": "Water Spawner",
+  "block.artifacts.rainbow_wool": "Rainbow Wool",
+  "block.artifacts.boes": "Block of Eternal Screaming",
+  "block.artifacts.unknown_element": "???",
 
   "itemGroup.artifactstab": "Artifacts"
 }

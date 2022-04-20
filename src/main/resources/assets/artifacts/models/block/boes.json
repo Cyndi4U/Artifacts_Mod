@@ -1,0 +1,100 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "artifacts:block/BOES",
+		"1": "artifacts:block/BOES_eyes",
+		"particle": "artifacts:block/BOES"
+	},
+	"elements": [
+		{
+			"name": "Jaw",
+			"from": [0, 0, 0],
+			"to": [16, 1, 16],
+			"faces": {
+				"north": {"uv": [0, 7.5, 8, 8], "texture": "#0"},
+				"east": {"uv": [0, 7.5, 8, 8], "texture": "#0"},
+				"south": {"uv": [0, 7.5, 8, 8], "texture": "#0"},
+				"west": {"uv": [0, 7.5, 8, 8], "texture": "#0"},
+				"up": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"down": {"uv": [0, 0, 8, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Throat",
+			"from": [1, 1, 11],
+			"to": [15, 10, 16],
+			"faces": {
+				"north": {"uv": [0.5, 3, 7.5, 7.5], "texture": "#0"},
+				"south": {"uv": [0.5, 3, 7.5, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "East Cheek",
+			"from": [0, 1, 0],
+			"to": [1, 10, 16],
+			"faces": {
+				"north": {"uv": [7.5, 3, 8, 7.5], "texture": "#0"},
+				"east": {"uv": [0, 3, 8, 7.5], "texture": "#0"},
+				"south": {"uv": [0, 3, 0.5, 7.5], "texture": "#0"},
+				"west": {"uv": [0, 3, 8, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "West Cheek",
+			"from": [15, 1, 0],
+			"to": [16, 10, 16],
+			"faces": {
+				"north": {"uv": [7.5, 3, 8, 7.5], "texture": "#0"},
+				"east": {"uv": [0, 3, 8, 7.5], "texture": "#0"},
+				"south": {"uv": [0, 3, 0.5, 7.5], "texture": "#0"},
+				"west": {"uv": [0, 3, 8, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Head",
+			"from": [0, 10, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 8, 3], "texture": "#0"},
+				"east": {"uv": [0, 0, 8, 3], "texture": "#0"},
+				"south": {"uv": [0, 0, 8, 3], "texture": "#0"},
+				"west": {"uv": [0, 0, 8, 3], "texture": "#0"},
+				"up": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"down": {"uv": [0, 0, 8, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Mouth",
+			"from": [1, 9, 0],
+			"to": [15, 10, 11],
+			"faces": {
+				"north": {"uv": [8.5, 3, 15.5, 3.5], "texture": "#0"},
+				"down": {"uv": [8.5, 2.5, 15.5, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Mouth",
+			"from": [1, 1, 0],
+			"to": [15, 2, 11],
+			"faces": {
+				"north": {"uv": [8.5, 3, 15.5, 3.5], "texture": "#0"},
+				"up": {"uv": [8.5, 2.5, 15.5, 8], "texture": "#0"}
+			}
+		},
+		{
+			"from": [1, 11, -0.1],
+			"to": [7, 15, -0.1],
+			"faces": {
+				"north": {"uv": [3, 0, 6, 2], "texture": "#1"}
+			}
+		},
+		{
+			"from": [9, 11, -0.1],
+			"to": [15, 15, -0.1],
+			"faces": {
+				"north": {"uv": [0, 0, 3, 2], "texture": "#1"}
+			}
+		}
+	]
+}

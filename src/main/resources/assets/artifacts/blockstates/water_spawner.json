@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "artifacts:block/water_spawner"}
+  }
+}
