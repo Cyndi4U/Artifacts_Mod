@@ -1,47 +1,31 @@
 package net.paletteheart.artifacts.block.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
-import net.minecraftforge.common.util.ForgeSoundType;
+import net.paletteheart.artifacts.block.entity.ModBlockEntities;
+import net.paletteheart.artifacts.block.entity.WaterSpawnerBlockEntity;
+import org.jetbrains.annotations.Nullable;
 
-import java.util.Random;
+public class WaterSpawnerBlock extends BaseEntityBlock {
 
-public class WaterSpawnerBlock extends Block {
-    public WaterSpawnerBlock(Properties sound) {
-        super(BlockBehaviour.Properties.of(Material.WATER)
-                .sound(new ForgeSoundType(1.0f, 1.0f, () -> new SoundEvent(new ResourceLocation("ambient.underwater.exit")),
-                        () -> new SoundEvent(new ResourceLocation("block.water.ambient")),
-                        () -> new SoundEvent(new ResourceLocation("ambient.underwater.enter")),
-                        () -> new SoundEvent(new ResourceLocation("ambient.underwater.exit")),
-                        () -> new SoundEvent(new ResourceLocation("ambient.underwater.exit"))))
-        );
+    public WaterSpawnerBlock(Properties properties) {
+        super(properties);
     }
 
-    public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
-        super.tick(blockstate, world, pos, random);
-        int x = pos.getX();
-        int y = pos.getY();
-        int z = pos.getZ();
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+        return null;
+    }
 
-        if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR) {
-            world.setBlock(new BlockPos((int) (x + 1), (int) y, (int) z), Blocks.WATER.defaultBlockState(), 3);
-        }
-        if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR) {
-            world.setBlock(new BlockPos((int) (x - 1), (int) y, (int) z), Blocks.WATER.defaultBlockState(), 3);
-        }
-        if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR) {
-            world.setBlock(new BlockPos((int) x, (int) y, (int) (z + 1)), Blocks.WATER.defaultBlockState(), 3);
-        }
-        if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR) {
-            world.setBlock(new BlockPos((int) x, (int) y, (int) (z - 1)), Blocks.WATER.defaultBlockState(), 3);
-        }
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
+        return  BaseEntityBlock.createTickerHelper(pBlockEntityType, ModBlockEntities.WATER_SPAWNER.get(), WaterSpawnerBlockEntity::tick);
     }
 }
